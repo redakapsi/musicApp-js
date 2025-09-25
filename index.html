@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <!-- Background video -->
+    <video autoplay muted loop id="bg-video">
+        <source src="videoplayback.mp4" type="video/mp4">
+    </video>
+
+    <div class="play">
+        <h1 id="onoff">Music Off</h1>
+        <h3 id="songname">No music playing</h3>
+
+        <div class="controlers">
+            <i id="backward" class="bi bi-skip-backward-fill"></i>
+            <i id="pause" class="bi bi-pause-circle-fill"></i>
+            <i id="forward" class="bi bi-skip-forward-fill"></i>
+            <audio id="player"></audio>
+        </div>
+
+        <input id="timeline" type="range" max="100" min="0" value="0">
+        <p id="songtime">0:00 / 0:00</p>
+
+        <input type="file" id="inputfile" hidden accept="audio/*" multiple>
+        <button id="addsong">Add Songs</button>
+    </div>
+
+    <div class="list">
+        <h1 id="songslist">Songs List</h1>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
